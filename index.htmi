@@ -1,63 +1,48 @@
 <!DOCTYPE html>
-<html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>노래 검색 홈페이지</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 20px;
-        }
-        h1 {
-            text-align: center;
-        }
-        .search-container {
-            display: flex;
-            justify-content: center;
-            margin-bottom: 20px;
-        }
-        input[type="text"] {
-            padding: 10px;
-            width: 300px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-        button {
-            padding: 10px 15px;
-            margin-left: 10px;
-            border: none;
-            border-radius: 5px;
-            background-color: #5cb85c;
-            color: white;
-            cursor: pointer;
-        }
-        button:hover {
-            background-color: #4cae4c;
-        }
-        .results {
-            margin-top: 20px;
-            text-align: center;
-        }
-    </style>
-</head>
-<body>
-    <h1>노래 검색</h1>
-    <div class="search-container">
-        <input type="text" id="songInput" placeholder="노래 제목을 입력하세요">
-        <button onclick="searchSong()">검색</button>
-    </div>
-    <div class="results" id="results"></div>
-
-    <script>
-        function searchSong() {
-            const songInput = document.getElementById('songInput').value;
-            const resultsDiv = document.getElementById('results');
-            resultsDiv.innerHTML = `<p>검색한 노래: ${songInput}</p>`;
-            // 여기에 실제 검색 로직을 추가할 수 있습니다.
-        }
-    </script>
-</body>
+<html>
+    <head>
+        <title>모멩이 노래 리스트</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="shortcut icon" href="moment.ico">
+        <link rel="apple-touch-icon" href="moment.ico">
+        <meta property="og:image" content="moment.ico">
+        <meta name="viewport" content="initial-scale=1.0, width=device-width">
+    </head>
+    <body onload="showAll()">
+        <h1>모멩이의 아는 곡 리스트</h1>
+        <p>가수 또는 제목으로 검색<small style="color: rgb(150, 200, 100)"> 2025.01.13 update</small></p>
+        <p>
+            <input id="searchBox" type="text" oninput="search(this.value)">
+            <button onclick="cleartext()"
+                onmouseenter="changecolor(this)"
+                onmouseleave="returncolor(this)"
+                style="background-color: rgb(250, 50, 100);">초기화</button>
+        </p>
+        <p id="show"></p><br><br><br><br>
+        <p class="index">
+            <button onclick="location.href=''"
+                onmouseenter="returncolor(this)"
+                onmouseleave="changecolor(this)"
+                style="background-color: #4CAF50;
+                    color: black;">맨 위</button>
+            <button onclick="location.href='#trot'"
+                onmouseenter="changecolor(this)"
+                onmouseleave="returncolor(this)"
+                style="background-color: rgb(250, 50, 150);">트로트</button>
+            <button onclick="location.href='#popsong'"
+                onmouseenter="changecolor(this)"
+                onmouseleave="returncolor(this)"
+                style="background-color: rgb(50, 150, 250);">팝송</button>
+            <button onclick="location.href='#disney'"
+                onmouseenter="changecolor(this)"
+                onmouseleave="returncolor(this)"
+                style="background-color: rgb(50, 200, 250);">디즈니</button>
+             <button onclick="location.href='#duet'"
+                onmouseenter="changecolor(this)"
+                onmouseleave="returncolor(this)"
+                style="background-color: rgb(50, 200, 250);">애교송</button>
+            <span style="background-color: white; padding: 1px 10px 3px 10px; border-radius: 4px; border: 2px solid rgb(50, 250, 200);"><small>made by 돌멩이</small></span>
+        </p>
+        <script src="sc.js"></script>
+    </body>
 </html>
