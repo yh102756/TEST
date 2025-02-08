@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>버튼 클릭 예제</title>
+    <script>
+        function openURL() {
+            window.open('https://ch.sooplive.co.kr/yh102756', '_blank'); // 원하는 URL로 변경
+        }
+    </script>
+</head>
+<body>
+    <button onclick="openURL()">웹사이트 열기</button>
+</body>
+</html>
