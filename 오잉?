@@ -3,14 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>버튼 클릭 예제</title>
-    <script>
-        function openURL() {
-            window.open('https://ch.sooplive.co.kr/yh102756', '_blank'); // 원하는 URL로 변경
+    <title>노래 검색 홈페이지</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
         }
-    </script>
+        h1 {
+            text-align: center;
+        }
+        .search-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        input[type="text"] {
+            padding: 10px;
+            width: 300px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            padding: 10px 15px;
+            margin-left: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #5cb85c;
+            color: white;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #4cae4c;
+        }
+        .results {
+            margin-top: 20px;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
-    <button onclick="openURL()">웹사이트 열기</button>
+    <h1>노래 검색</h1>
+    <div class="search-container">
+        <input type="text" id="songInput" placeholder="노래 제목을 입력하세요">
+        <button onclick="searchSong()">검색</button>
+    </div>
+    <div class="results" id="results"></div>
+
+    <script>
+        function searchSong() {
+            const songInput = document.getElementById('songInput').value;
+            const resultsDiv = document.getElementById('results');
+            resultsDiv.innerHTML = `<p>검색한 노래: ${songInput}</p>`;
+            // 여기에 실제 검색 로직을 추가할 수 있습니다.
+        }
+    </script>
 </body>
 </html>
