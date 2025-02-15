@@ -1,41 +1,121 @@
-button {
+/* 기본 스타일 설정 */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center; /* 텍스트 중앙 정렬 */
+    margin: 0 70px; /* 양쪽 여백 추가 */
+}
+
+/* 헤더 스타일 */
+#header {
+    position: relative; /* 자식 요소의 절대 위치를 설정하기 위해 relative로 설정 */
+    margin-bottom: 20px; /* 제목과 입력 필드 간의 간격 조정 */
+}
+
+#header img {
+    width: 1000px; /* 이미지 크기 조정 */
+    height: 150px; /* 이미지 크기 조정 */
+}
+
+#header h1 {
+    position: absolute; /* 제목을 절대 위치로 설정 */
+    top: 60%; /* 이미지의 중앙에 위치 */
+    left: 50%; /* 이미지의 중앙에 위치 */
+    transform: translate(-50%, -50%); /* 중앙 정렬을 위한 변환 */
+    color: black; /* 제목 색상 설정 */
+    font-size: 36px; /* 제목 크기 조정 */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* 가독성을 위한 그림자 추가 */
+}
+
+/* 비디오 컨테이너 스타일 */
+#videoContainer {
+    margin-top: 20px;
+}
+
+/* 노래 리스트 스타일 */
+#songList {
+    margin-top: 20px;
+    margin-bottom: 30px; /* 하단 여백 추가 */
+    display: flex;
+    flex-direction: row; /* 수평으로 나열 */
+    flex-wrap: wrap; /* 버튼이 공간에 맞게 줄 바꿈 */
+    justify-content: center; /* 버튼 중앙 정렬 */
+}
+
+/* 노래 버튼 스타일 */
+.songButton {
+    display: flex;
+    flex-direction: column; /* 세로 방향으로 나열 */
+    align-items: center; /* 중앙 정렬 */
+    margin: 10px; /* 버튼 간의 간격 조정 */
+    padding: 20px; /* 패딩을 늘림 */
+    background-color: #f0f0f0;
     border: none;
-    padding: 10px 20px;
-    border-radius: 20px;
-    color: white;
-}   //메뉴
-input {
-    padding: 4px 4px;
-    border-radius: 4px;
-}   
-p {
-    text-align: center;
+    border-radius: 10px; /* 버튼 모서리 둥글게 */
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 15px; /* 폰트 크기를 늘림 */
+    width: 340px; /* 버튼 너비 조정 */
+    height: 210px; /* 버튼 높이 조정 */
 }
-h1 {
-    text-align: center;
+
+.songButton:hover {
+    background-color: #ff69b4; /* 호버 시 배경색 변화 */
 }
-table {
-    width: 96%;
+
+.songButton img {
+    width: 280px; /* 이미지 크기 조정 */
+    height: 180px; /* 이미지 크기 조정 */
+    margin-bottom: 8px; /* 이미지와 텍스트 간격 조정 */
 }
-th {
-    border: 2px groove;
+
+/* 입력 필드 스타일 */
+#songInput {
+    display: block; /* 블록 요소로 설정 */
+    width: 180px; /* 너비 조정 */
+    padding: 10px; /* 패딩 추가 */
+    font-size: 15px; /* 폰트 크기 조정 */
+    border: 1px solid #ccc; /* 테두리 추가 */
+    border-radius: 5px; /* 모서리 둥글게 */
 }
-td {
-    text-align: center;
-    border: 1px solid;
-    padding-top: 7px;
-    padding-bottom: 7px;
-    font-size: small;
-    padding-left: 5px;
-    padding-right: 5px;
+
+/* 입력 컨테이너 스타일 */
+.input-container {
+    display: flex; /* 플렉스 박스를 사용하여 요소를 가로로 배치 */
+    flex-direction: row; /* 수평 방향으로 설정 */
+    align-items: center; /* 수직 정렬 */
+    margin: 20px 0; /* 입력 필드와 버튼 간의 간격 */
+    justify-content: center; /* 중앙 정렬 */
+    gap: 10px; /* 입력 필드와 버튼 사이의 간격을 10px로 설정 */
 }
-b {
-    color: white;
-    background-color: rgb(250, 100, 200);
+
+/* 지우기 버튼 스타일 */
+.clear-button {
+    width: 80px; /* 버튼 너비 조정 */
+    height: 30px; /* 버튼 높이 조정 */
+    padding: 0px; /* 패딩 추가 */
+    font-size: 15px; /* 폰트 크기 조정 */
+    border: none; /* 테두리 제거 */
+    border-radius: 5px; /* 모서리 둥글게 */
+    background-color: #dc3545; /* 배경색 설정 */
+    color: white; /* 글자색 설정 */
+    cursor: pointer; /* 커서 모양 변경 */
 }
-p.index {
-    position: fixed;
-    left: 1rem;
-    right: 1rem;
-    bottom: 1rem;
+
+/* 지우기 버튼 호버 효과 */
+.clear-button:hover {
+    background-color: #c82333; /* 호버 시 배경색 변경 */
+}
+
+/* 왼쪽 이미지 스타일 */
+#leftImage {
+    position: absolute; /* 부모 요소에 대해 절대 위치로 설정 */
+    top: 3%; /* 화면 상단에 위치 */
+    left: 65px; /* 오른쪽 여백 */
+    z-index: 1000; /* 다른 요소들 위에 표시되도록 z-index 설정 */
+    text-align: center; /* 텍스트 중앙 정렬 */
+}
+
+#leftImage img {
+    width: 200px; /* 이미지 크기 조정 */
+    height: auto; /* 비율에 맞게 높이 자동 조정 */
 }
