@@ -1,48 +1,37 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>노래 리스트</title>
-        <link rel="stylesheet" href="style.css">
-        <link rel="shortcut icon" href="moment.jpg">
-        <link rel="apple-touch-icon" href="moment.jpg">
-        <meta property="og:image" content="moment.jpg">
-        <meta name="viewport" content="initial-scale=1.0, width=device-width">
-    </head>
-    <body onload="showAll()">
-        <h1>모멩이의 라이브 리스트</h1>
-        <p>가수 or 제목 으로 검색<small style="color: rgb(250, 200, 100)"> 2025.01.31 update</small></p>
-        <p>
-            <input id="searchBox" type="text" oninput="search(this.value)">
-            <button onclick="cleartext()"
-                onmouseenter="changecolor(this)"
-                onmouseleave="returncolor(this)"
-                style="background-color: rgb(250, 50, 100);">지우기</button>
-        </p>
-        <p id="show"></p><br><br><br><br>
-        <p class="index">
-            <button onclick="location.href=''"
-                onmouseenter="returncolor(this)"
-                onmouseleave="changecolor(this)"
-                style="background-color: #4CAF50;
-                    color: black;">맨 위</button>
-            <button onclick="location.href='#trot'"
-                onmouseenter="changecolor(this)"
-                onmouseleave="returncolor(this)"
-                style="background-color: rgb(250, 50, 150);">트로트</button>
-            <button onclick="location.href='#popsong'"
-                onmouseenter="changecolor(this)"
-                onmouseleave="returncolor(this)"
-                style="background-color: rgb(50, 150, 250);">팝송</button>
-            <button onclick="location.href='#disney'"
-                onmouseenter="changecolor(this)"
-                onmouseleave="returncolor(this)"
-                style="background-color: rgb(50, 200, 250);">디즈니</button>
-             <button onclick="location.href='#duet'"
-                onmouseenter="changecolor(this)"
-                onmouseleave="returncolor(this)"
-                style="background-color: rgb(50, 200, 250);">애교송</button>
-            <span style="background-color: white; padding: 1px 10px 3px 10px; border-radius: 4px; border: 2px solid rgb(50, 250, 200);"><small>제작자 모멩이매니저</small></span>
-        </p>
-        <script src="sc.js"></script>
-    </body>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>라이브 영상 검색</title>
+    <link rel="stylesheet" href="styles.css"> <!-- CSS 파일 링크 -->
+    <link rel="shortcut icon" href="yh102756.jpg">
+</head>
+<body>
+    <div id="header">
+        <img src="https://stimg.sooplive.co.kr/NORMAL_BBS/4/28221594/628467487e15c78f0.jpg"> <!-- 이미지 경로를 수정하세요 -->
+        <h1>라이브 검색</h1> <!-- 제목을 이미지 위로 이동 -->
+    </div>
+
+       <div class="input-container">
+        <input type="text" id="songInput" placeholder="가수 또는 제목으로 검색"> 
+        <button class="clear-button" onclick="cleartext()" onmouseenter="changecolor(this)" onmouseleave="returncolor(this)">지우기</button>
+    </div>
+
+    <div id="videoContainer"></div>
+
+    <div id="songList"></div>
+    <div id="songCount">총 영상 수: <span id="count">0</span>개
+          <small style="color: rgb(150, 200, 100)"> 2024.12.21 update</small></div> <!-- 곡 수 표시 -->
+
+     
+
+    <div id="leftImage">
+        <a href="https://ch.sooplive.co.kr/yh102756"> <!-- 클릭 시 이동할 URL -->
+            <img src="https://res.sooplive.co.kr/images/svg/soop_logo.svg" alt="왼쪽 이미지"> <!-- 오른쪽에 표시할 이미지 -->
+        </a>
+    </div>
+
+    <script src="sc.js"></script> <!-- JavaScript 파일 링크 -->
+</body>
 </html>
