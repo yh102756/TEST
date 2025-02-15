@@ -1,382 +1,313 @@
-const title = [{"singer": "거미", "songs": ["그대 돌아오면", "음악이 끝나기 전에", "친구라도 될 걸 그랬어"]},
-    {"singer": "검정치마", "songs": ["기다린 만큼, 더"]},
-    {"singer": "권진아", "songs": ["끝","오늘 뭐 했는지 말해봐"]},
-    {"singer": "김나영", "songs": ["어땠을까"]},
-    {"singer": "남규리", "songs": ["깊은 밤을 날아서"]},
-    {"singer": "다비치", "songs": ["8282", "남자도우나요", "모르시나요", "미워도 사랑하니까", "안녕이라고 말하지마", "편지", "화이트"]},
-    {"singer": "디에이드/어쿠스틱 콜라보", "songs": ["너무 보고싶어", "묘해, 너와"]},
-    {"singer": "데이라이트", "songs": ["머리를 자르고"]},
-    {"singer": "러브홀릭", "songs": ["그대만 있다면"]}, {"singer": "린", "songs": ["사랑했잖아", "시간을거슬러"]},
-    {"singer": "민서", "songs": ["사월이 지나면 우리 헤어져요", "좋아"]}, {"singer": "박보람", "songs": ["애쓰지마요", "연예할래", "예뻐졌다", "혜화동"]}, {"singer": "박은신", "songs": ["슬픈사랑"]},
-    {"singer": "박정현", "songs": ["꿈에", "편지할게요"]}, {"singer": "박지윤", "songs": ["바래진 기억에", "환상"]},
-    {"singer": "박화요비", "songs": ["그런일은"]},
-    {"singer": "박효신", "songs": ["눈의 꽃", "Gift"]}, {"singer": "백아연", "songs": ["이럴거면 그러지말지"]}, {"singer": "백지영", "songs": ["거짓말이라도 해서 널 보고싶어"]},
-    {"singer": "벤", "songs": ["꿈처럼", "내 목소리 들리니", "눈사람", "안갯길", "열애중", "오늘은 가지마"]}, {"singer": "보보", "songs": ["늦은후회"]},
-    {"singer": "볼빨간사춘기", "songs": ["너는 내 세상이었어", "좋다고 말해"]}, {"singer": "빅마마", "songs": ["연", "체념"]},
-    {"singer": "산들", "songs": ["취기를 빌려"]}, {"singer": "새봄", "songs": ["서른에게"]},
-    {"singer": "서영은", "songs": ["내 안의 그대", "혼자가 아닌 나"]}, {"singer": "선우정아", "songs": ["고양이", "구애", "도망가자"]},
-    {"singer": "성시경", "songs": ["두사람", "태양계", "희재"]}, {"singer": "소유", "songs": ["I Miss You"]},
-    {"singer": "손디아", "songs": ["어른"]}, {"singer": "송하예", "songs": ["니소식", "새사랑"]},
-    {"singer": "숙희", "songs": ["틈"]}, 
-    {"singer": "신예영", "songs": ["마지막사랑", "우리 왜 헤어져야 해"]}, {"singer": "신용재", "songs": ["가수가 된 이유"]},
-    {"singer": "심규선", "songs": ["부디", "아라리"]}, {"singer": "십센치/10cm", "songs": ["펫(pet)", "폰서트"]},
-    {"singer": "스텐딩에그", "songs": ["오래된 노래", "Little Star"]}, {"singer": "씨야", "songs": ["구두"]}, 
-    {"singer": "아이유/IU", "songs": ["겨울잠", "금요일에 만나요", "나만몰랐던이야기", "너의의미", "내 손을 잡아", "드라마", "마음", "마음을 드려요", "무릎", "미아", "바람꽃", "밤편지", "복숭아", "어푸", "이런 엔딩", "이름에게", "이 지금", "자장가", "Love poem", "Love Wins All"]},
-    {"singer": "양파", "songs": ["애이불비", "A'ddio"]}, {"singer": "에일리", "songs": ["첫눈처럼 너에게 가겠다"]},
-    {"singer": "옥상달빛", "songs": ["수고했어, 오늘도"]}, {"singer": "왁스", "songs": ["화장을 고치고", "황혼의 문턱"]}, {"singer": "우주소녀 쪼꼬미", "songs": ["슈퍼 그럼요"]},
-    {"singer": "우효", "songs": ["민들레"]}, {"singer": "웬디", "songs": ["Goodbye"]}, {"singer": "유미", "songs": ["별", "사랑은 언제나 목마르다", "차라리"]},
-    {"singer": "윤토벤", "songs": ["서툰 이별을 하려해"]}, {"singer": "윤하", "songs": ["기다리다", "바람", "비밀번호 486", "사건의 지평선", "오늘 헤어졌어요", "오르트구름"]},
-    {"singer": "윤현상", "songs": ["나 평생 그대 곁을 지킬게", "밥 한 끼 해요", "언제쯤이면"]}, {"singer": "이민혁", "songs": ["하늘엔 별이 떠있고 너만큼은 빛나질 않아"]}, {"singer": "이소라", "songs": ["제발", "처음 느낌 그대로"]},
-    {"singer": "이소정", "songs": ["함께 했는데 이별은 나 혼자인 거야"]}, {"singer": "이수영", "songs": ["덩그러니"]}, {"singer": "이안", "songs": ["물고기자리"]},
-    {"singer": "이예준", "songs": ["그날에 나는 맘이 편했을까", "내 생에 아름다운", "넌 나의 20대였어", "널 미워하기로 했어", "늦은 밤 너의 집 앞 골목길에서", "미친 소리"]},
-    {"singer": "이창섭", "songs": ["천상연"]}, {"singer": "이하이", "songs": ["한숨"]},
-    {"singer": "자우림", "songs": ["스물다섯, 스물하나"]}, {"singer": "잔나비", "songs": ["주저하는 연인들을 위해"]}, {"singer": "장나라", "songs": ["Sweet Dream", "고백", "나도 여자랍니다"]},
-    {"singer": "장윤주", "songs": ["파리에 부친 편지", "Fly Away"]}, {"singer": "적재", "songs": ["별 보러 가자"]},
-    {"singer": "정인", "songs": ["오르막길"]}, {"singer": "제이레빗", "songs": ["내일을 묻는다", "선잠", "요즘 너 말야", "Happy Things"]}, 
-    {"singer": "조수미", "songs": ["나 가거든"]}, {"singer": "지아", "songs": ["물론", "사랑하지 않아서 그랬니", "술 한잔 해요"]}, 
-    {"singer": "청하", "songs": ["그 끝에 그대"]}, {"singer": "초승", "songs": ["짝사랑", "호수"]},
-    {"singer": "최유리", "songs": ["숲", "밤, 바다"]}, {"singer": "츄", "songs": ["고백"]},
-    {"singer": "치즈", "songs": ["어떻게 생각해", "이렇게 좋아해 본 적이 없어요", "Madeleine Love", "Mood Indigo"]}, {"singer": "케이시", "songs": ["그때가 좋았어", "마중", "진심이 담긴 노래"]}, 
-    {"singer": "쿨", "songs": ["아로하", "애상"]}, {"singer": "태연", "songs": ["그대라는 시", "들리나요", "만약에", "사계", "제주도의 푸른 밤", "Rain", "Weekend"]}, {"singer": "파테코/PATEKO", "songs": ["작은 날"]},
-    {"singer": "헤일", "songs": ["어떨 것 같아"]}]; 
-const trot = [{"singer": "서주경", "songs": ["당돌한 여자"]}, {"singer": "윤수현", "songs": ["천태만상"]}, {"singer": "홍진영", "songs": ["사랑의 배터리"]}]; 
-const popsong = [{"singer": "Alicia Keys", "songs": ["If I Ain't Got You"]}, {"singer": "Carpenters", "songs": ["Close to you"]},
-    {"singer": "Daniel Caesar", "songs": ["Best Part"]}, {"singer": "Frank Sinatra", "songs": ["Fly me tothe moon"]}, {"singer": "Lauryn Hill", "songs": ["Can’t Take My Eyes Off of You"]},
-    {"singer": "M.Y.M.P", "songs": ["Say You Love Me"]}, {"singer": "Natalie Cole", "songs": ["L-O-V-E"]}, {"singer": "Pink Sweat$", "songs": ["Honesty"]},
-    {"singer": "Rachael Yamagata", "songs": ["Be Be Your Love"]}, {"singer": "Richard Sanderson", "songs": ["Reality (라붐 OST)"]},
-    {"singer": "Ryan Gosling, Emma Stone", "songs": ["City Of Stars"]}, {"singer": "Stan Getz, Joao Gilberto", "songs": ["The Girl From Ipanema"]},
-    {"singer": "Stephanie Poetri", "songs": ["I Love You 3000"]}, {"singer": "Tamia", "songs": ["Officially Missing You"]},
-    {"singer": "The Beatles", "songs": ["I Will"]}]; 
-const disney = [{"singer": "디즈니", "songs": ["Speechless (알라딘)", "A Whole New World (알라딘)", "When Will My Life Begin? (라푼젤)", "I See the Light (라푼젤)", "Let It Go(겨울왕국)", "Love Is an Open Door (겨울왕국)", "나 언젠간 떠날 거야 (모아나)", "Part Of Your World (인어공주)", "Reflection (뮬란)"]}];
-const duet = [{"singer": "애교송", "songs": ["고양이송", "귀요미송", "멋쟁이토마토", "바나나차차", "살구송", "아기공룡둘리", "아기상어", "짱구는못말려"]}]; 
-const newUpdate = ["신예영 - 마지막 사랑", "황가람 - 미치게그리워서"];
-let songsPerRow; // 한 줄에 몇 개까지 나열할 건지
-
-let allHtml = null;
-
-function changecolor(x) {// mouseenter
-    x.style.color = "#000000";
-}
-function returncolor(x) {// mouseleave
-    x.style.color = "#ffffff";
-}
-
-function cleartext() {// 초기화
-    document.getElementById("searchBox").value = null;
-    document.getElementById("show").innerHTML = allHtml;
-}
-
-function distinguish() {// 모바일 환경 고려
-    let filter = "win16|win32|win64|mac|macintel";
-    if (navigator.platform) {
-        if (filter.indexOf(navigator.platform.toLowerCase()) < 0) {
-            songsPerRow = 3;
+const songs = {
+    "검정치마": [
+        {
+            "title": "기다린만큼, 더",
+            "link": "https://vod.sooplive.co.kr/player/145776479?autoPlay=true",
+            "image": "https://videoimg.sooplive.co.kr/php/SnapshotLoad.php?rowKey=20241221_26343997_1_l"
         }
-        else {
-            songsPerRow = 6;
+    ],
+    "권진아": [
+        {
+            "title": "오늘 뭐 했는지 말해봐",
+            "link": "https://vod.sooplive.co.kr/player/139045515?autoPlay=true",
+            "image": "https://videoimg.sooplive.co.kr/php/SnapshotLoad.php?rowKey=clip_20241013_193_39887859-c1e5-4876-ac53-236cffc975a2_24463193_l&column=2&t=1729796963"
+        },
+{
+            "title": "끝",
+            "link": "https://vod.sooplive.co.kr/player/140227589?autoPlay=true",
+            "image": "https://videoimg.sooplive.co.kr/php/SnapshotLoad.php?rowKey=20241025_24786043_1_l"
         }
-    }
-}
+    ],
+"김나영": [
+        {
+            "title": "어땟을까",
+            "link": "https://vod.sooplive.co.kr/player/139447553?autoPlay=true",
+            "image": "https://iflv14.sooplive.co.kr/clip/20241017/713/5f61b035-199f-41b6-987c-420ba05bae11/24574713_l.jpg"
+        }
+    ],
+    "디에이드": [
+        {
+            "title": "너무 보고싶어",
+            "link": "https://vod.sooplive.co.kr/player/146456297?autoPlay=true",
+            "image": "https://videoimg.sooplive.co.kr/php/SnapshotLoad.php?rowKey=20241228_26547315_1_l"
+        },
+        {
+            "title": "묘해, 너와",
+            "link": "https://vod.sooplive.co.kr/player/145915067?autoPlay=true",
+            "image": "https://videoimg.sooplive.co.kr/php/SnapshotLoad.php?rowKey=20241222_26385263_1_l"
+        }
+    ],
+"데이라이트": [
+        {
+            "title": "머리를 자르고",
+            "link": "https://vod.sooplive.co.kr/player/144210651?autoPlay=true",
+            "image": "https://iflv14.sooplive.co.kr/clip/20241205/381/61224231-52eb-440c-be47-2ecc4d8b75b3/25898381_l.jpg"
+        }
+    ],
+"너드커넥션": [
+        {
+            "title": "그대만 있다면",
+            "link": "https://vod.sooplive.co.kr/player/140431193?autoPlay=true",
+            "image": "https://videoimg.sooplive.co.kr/php/SnapshotLoad.php?rowKey=20241027_24845135_1_l"
+        }
+    ],
+"백지영": [
+        {
+            "title": "거짓말이라도 해서 널 보고싶어",
+            "link": "https://vod.sooplive.co.kr/player/141071793?autoPlay=true",
+            "image": "https://videoimg.sooplive.co.kr/php/SnapshotLoad.php?rowKey=20241102_25024645_1_l"
+        }
+    ],
+    "린": [
+        {
+            "title": "사랑했잖아",
+            "link": "https://vod.sooplive.co.kr/player/145915311?autoPlay=true",
+            "image": "https://videoimg.sooplive.co.kr/php/SnapshotLoad.php?rowKey=20241222_26385341_1_l"
+        }
+    ],
+    "민서": [
+        {
+            "title": "사월이 지나면 우리 헤어져요",
+            "link": "https://vod.sooplive.co.kr/player/145916541?autoPlay=true",
+            "image": "https://videoimg.sooplive.co.kr/php/SnapshotLoad.php?rowKey=20241222_26385699_1_l"
+        }
+    ],
+    "벤": [
+        {
+            "title": "오늘은 가지마",
+            "link": "https://vod.sooplive.co.kr/player/139727565?autoPlay=true",
+            "image": "file:///C:/Users/kys0918/Desktop/%EC%98%A4%EB%8A%98%EC%9D%80%20%EA%B0%80%EC%A7%80%EB%A7%88.jpg"
+        }
+    ],
+    "선우정아": [
+        {
+            "title": "도망가자",
+            "link": "https://vod.sooplive.co.kr/player/145916081?autoPlay=true",
+            "image": "https://videoimg.sooplive.co.kr/php/SnapshotLoad.php?rowKey=20241222_26385551_1_l"
+        }
+    ],
+    "손디아": [
+        {
+            "title": "어른",
+            "link": "https://vod.sooplive.co.kr/player/145776087?autoPlay=true",
+            "image": "https://videoimg.sooplive.co.kr/php/SnapshotLoad.php?rowKey=20241221_26343891_1_l"
+        }
+    ],
+    "송하예": [
+        {
+            "title": "니 소식",
+            "link": "https://vod.sooplive.co.kr/player/140804707?autoPlay=true",
+            "image": "file:///C:/Users/kys0918/Desktop/%EB%8B%88%EC%86%8C%EC%8B%9D.jpg"
+        },
+        {
+            "title": "새 사랑",
+            "link": "https://vod.sooplive.co.kr/player/139826463?autoPlay=true",
+            "image": "file:///C:/Users/kys0918/Desktop/%EC%83%88%EC%82%AC%EB%9E%91.jpg"
+        }
+    ],
+    "스탠딩에그": [
+        {
+            "title": "Little Star",
+            "link": "https://vod.sooplive.co.kr/player/146456575?autoPlay=true",
+            "image": "https://videoimg.sooplive.co.kr/php/SnapshotLoad.php?rowKey=20241228_26547397_1_l"
+        }
+    ],
+    "아이유": [
+        {
+            "title": "이런 엔딩",
+            "link": "https://vod.sooplive.co.kr/player/145777015?autoPlay=true",
+            "image": "https://videoimg.sooplive.co.kr/php/SnapshotLoad.php?rowKey=20241221_26344135_1_l"
+        },
+        {
+            "title": "이 지금",
+            "link": "https://vod.sooplive.co.kr/player/145776835?autoPlay=true",
+            "image": "https://videoimg.sooplive.co.kr/php/SnapshotLoad.php?rowKey=20241221_26344079_2_l"
+        }
+    ],
+    "이소정": [
+        {
+            "title": "함께 했는데 이별은 나 혼자 인거야",
+            "link": "https://vod.sooplive.co.kr/player/146456409?autoPlay=true",
+            "image": "https://videoimg.sooplive.co.kr/php/SnapshotLoad.php?rowKey=20241228_26547347_1_l"
+        }
+    ],
+    "이예준": [
+        {
+            "title": "넌 나의 20대 였어",
+            "link": "https://vod.sooplive.co.kr/player/145777577?autoPlay=true",
+            "image": "file:///C:/Users/kys0918/Desktop/20%EB%8C%80.jpg"
+        },
+        {
+            "title": "널 미워 하기로 했어",
+            "link": "https://vod.sooplive.co.kr/player/141071399?autoPlay=true",
+            "image": "file:///C:/Users/kys0918/Desktop/%EB%84%90%EB%AF%B8%EC%9B%8C%ED%95%98%EA%B8%B0%EB%A1%9C%ED%96%88%EC%96%B4.jpg"
+        },
+        {
+            "title": "그날에 나는 맘이 편했을까",
+            "link": "https://vod.sooplive.co.kr/player/140431267?autoPlay=true",
+            "image": "file:///C:/Users/kys0918/Desktop/%EA%B7%B8%EB%82%A0%EC%97%90.jpg"
+        },
+        {
+            "title": "미친 소리",
+            "link": "https://vod.sooplive.co.kr/player/139736371?autoPlay=true",
+            "image": "file:///C:/Users/kys0918/Desktop/%EB%AF%B8%EC%B9%9C%EC%86%8C%EB%A6%AC.jpg"
+        }
+    ],
+    "에일리": [
+        {
+            "title": "첫눈처럼 너에게 가겠다",
+            "link": "https://vod.sooplive.co.kr/player/145915531?autoPlay=true",
+            "image": "https://videoimg.sooplive.co.kr/php/SnapshotLoad.php?rowKey=20241222_26385409_1_l"
+        }
+    ],
+    "장윤정": [
+        {
+            "title": "어머나",
+            "link": "https://vod.sooplive.co.kr/player/145915835?autoPlay=true",
+            "image": "https://videoimg.sooplive.co.kr/php/SnapshotLoad.php?rowKey=20241222_26385489_1_l"
+        }
+    ],
+    "하리": [
+        {
+            "title": "귀요미",
+            "link": "https://vod.sooplive.co.kr/player/140027837?autoPlay=true",
+            "image": "file:///C:/Users/kys0918/Desktop/3.jpg"
+        }
+    ],
+    "헤일": [
+        {
+            "title": "어떨 것 같아",
+            "link": "https://vod.sooplive.co.kr/player/145775861?autoPlay=true",
+            "image": "https://videoimg.sooplive.co.kr/php/SnapshotLoad.php?rowKey=20241221_26343839_1_l"
+        }
+    ],
+    "다비치": [
+        {
+            "title": "안녕이라고 말하지마",
+            "link": "https://vod.sooplive.co.kr/player/145775347?autoPlay=true",
+            "image": "file:///C:/Users/kys0918/Desktop/6.jpg"
+        },
+{
+            "title": "미워도 사랑하니까",
+            "link": "https://vod.sooplive.co.kr/player/140615671?autoPlay=true",
+            "image": "https://videoimg.sooplive.co.kr/php/SnapshotLoad.php?rowKey=20241029_24897933_1_l"
+        },
+{
+            "title": "남자도우나요",
+            "link": "https://vod.sooplive.co.kr/player/139059793?autoPlay=true",
+            "image": "https://iflv14.sooplive.co.kr/clip/20241013/041/afd303e2-27cc-4fe4-9f0b-15b51fa144b3/24467041_l.jpg"
+        }
+    ],
+    "박화요비": [
+        {
+            "title": "그런일은",
+            "link": "https://vod.sooplive.co.kr/player/145775589?autoPlay=true",
+            "image": "https://videoimg.sooplive.co.kr/php/SnapshotLoad.php?rowKey=20241221_26343775_1_l"
+        }
+    ]
+};
 
-function spanCalc(x) {// 몇 줄인지 계산
-    let remainder = x % songsPerRow;
-    if (remainder == 0) {
-        return x / songsPerRow;
-    }
-    else return (x - remainder) / songsPerRow + 1;
-}
-
-function showAll() {// 목록 전부 보여주기
-    distinguish();
-    makeNewTable();
-    htmlText += "</tr></table><br><table id=\"baegna\" align=\"center\">";
-    showTable(title);
-    htmlText += "<br><table align=\"center\" <caption><h3 id=\"trot\">트로트</h3></caption>";
-    showTable(trot);
-    htmlText += "<br><table align=\"center\" <caption><h3 id=\"popsong\">팝송</h3></caption>";
-    showTable(popsong);
-    htmlText += "<br><table align=\"center\" <caption><h3 id=\"disney\">디즈니</h3></caption>";
-    showTable(disney);
-    htmlText += "<br><table align=\"center\" <caption><h3 id=\"duet\">애교송</h3></caption>";
-    showDuet();
-
-    document.getElementById("show").innerHTML = htmlText;
-    allHtml = htmlText;
-}
-
-function showDuet() {
-    for (let i = 0; i < duet.length; i++) {
-        let songslen = duet[i].songs.length;
-        let spannum = spanCalc(songslen);
-        htmlText += "<tr><th rowspan=\"" + spannum + "\">" + duet[i].singer.split("/")[0] + "</th>"; // 가수
-        for (let j = 0; j < songslen; j++) { // 노래들
-            htmlText += "<td ";
-            if (songsPerRow == 2) {
-                htmlText += "style=\"width:100%;\"";
-            }
-            else {
-                htmlText += "style=\"width:15%;\"";
-            }
-            htmlText += ">" + duet[i].songs[j].split("/")[0] + "</td>";
-            if (j % songsPerRow == songsPerRow - 1) {
-                htmlText += "</tr>";
-                if (j != songslen - 1) {
-                    htmlText += "<tr>";
-                }
-            }
-        }
-        if (songslen % songsPerRow != 0) {
-            htmlText += "</tr>";
-        }
-    }
-    htmlText += "</table>";
-}
-
-function makeNewTable() {
-    htmlText = "<table id=\"new\" align=\"center\"><tr><td style=\"background-color: rgb(50, 250, 150);\"";
-    let newLength = newUpdate.length;
-    let newSpan = spanCalc(newLength) * 2;
-    let half = songsPerRow / 2;
-    let remainder = newLength % songsPerRow;
-    if (remainder > 0 && remainder <= half) {
-        newSpan = newSpan - 1;
-    }
-    htmlText += " rowspan=\"" + newSpan + "\">New</td>";
-    for (let i = 0; i < newLength; i++) {
-        htmlText += "<td ";
-        if (songsPerRow == 2) {
-            htmlText += "style=\"width:34%;\"";
-        }
-        else {
-            htmlText += "style=\"width:29%;\"";
-        }
-        htmlText += ">" + newUpdate[i] + "</td>";
-        if (i % half == half - 1) {
-            htmlText += "</tr>";
-            if (i != newLength - 1) {
-                htmlText += "<tr>";
-            }
-        }
-    }
-}
-
-function showTable(table) {
-    for (let i = 0; i < table.length; i++) {
-        let songslen = table[i].songs.length;
-        let spannum = spanCalc(songslen);
-        htmlText += "<tr><th rowspan=\"" + spannum + "\">" + table[i].singer.split("/")[0] + "</th>"; // 가수
-        for (let j = 0; j < songslen; j++) { // 노래들
-            htmlText += "<td ";
-            if (songsPerRow == 2) {
-                htmlText += "style=\"width:34%;\"";
-            }
-            else {
-                htmlText += "style=\"width:15%;\"";
-            }
-            htmlText += ">" + table[i].songs[j].split("/")[0] + "</td>";
-            if (j % songsPerRow == songsPerRow - 1) {
-                htmlText += "</tr>";
-                if (j != songslen - 1) {
-                    htmlText += "<tr>";
-                }
-            }
-        }
-        if (songslen % songsPerRow != 0) {
-            htmlText += "</tr>";
-        }
-    }
-    htmlText += "</table>";
-}
-
-function search(str) {// 검색 결과 띄우기
-    if (str == '') {// 빈 칸이면 전체 보여줌
-        document.getElementById("show").innerHTML = allHtml;
-    }
-    else {
-        let searchedSinger = "<table align=\"center\">";
-        let searchedSong = "<table align=\"center\">";
-        let words = str.trim().split(/\s+/);// 띄어쓰기 검색 고려, 단어로 나눔
-        let wordslen = [];// 단어의 길이
-        let numwords = words.length;// 단어 수
-        for (let i = 0; i < numwords; i++) {// 각 단어 길이 구하기
-            let wordlen = words[i].length;
-            wordslen.push(wordlen);
-        }
-        ({ searchedSinger, searchedSong } = searchTable(title, words, wordslen, numwords, searchedSinger, searchedSong));
-        ({ searchedSinger, searchedSong } = searchTable(trot, words, wordslen, numwords, searchedSinger, searchedSong));
-        ({ searchedSinger, searchedSong } = searchTable(popsong, words, wordslen, numwords, searchedSinger, searchedSong));
-        ({ searchedSinger, searchedSong } = searchTable(disney, words, wordslen, numwords, searchedSinger, searchedSong));
-        ({ searchedSinger, searchedSong } = searchTable(duet, words, wordslen, numwords, searchedSinger, searchedSong));
-        document.getElementById("show").innerHTML = searchedSinger + searchedSong;
-    }
-}
-
-function searchTable(table, words, wordslen, numwords, searchedSinger, searchedSong) {
-    for (let i = 0; i < table.length; i++) {
-        let singer = table[i].singer;// 가수
-        let songs = table[i].songs;// 노래들
-        let songslen = songs.length;// 노래 수
-        let spannum = spanCalc(songslen);
-        let searchResult = [];// 검색 결과
-        for (let j = 0; j < numwords; j++) {// 가수 검색
-            let wordSearch = singer.toLowerCase().search(words[j].toLowerCase());
-            if (wordSearch != -1) {
-                searchResult.push(wordSearch);
-            }
-        }
-        singer = singer.split("/")[0];
-        if (numwords == searchResult.length) {// 가수에서 단어들이 다 검색되면
-            searchedSinger = singerSearch(searchedSinger, spannum, singer, searchResult, numwords, wordslen);// 검색된 가수 이름 띄우기
-
-            searchedSinger = songsOfSinger(songslen, numwords, songs, words, searchedSinger, wordslen);// 검색된 가수의 노래 띄우기
-        }
-        else {// 가수에서 검색되지 않음 -> 노래에서 검색
-            for (let j = 0; j < songslen; j++) {
-                searchResult = [];
-                for (let k = 0; k < numwords; k++) {
-                    let wordSearch = songs[j].toLowerCase().search(words[k].toLowerCase());
-                    if (wordSearch != -1) {
-                        searchResult.push(wordSearch);
-                    }
-                }
-                if (numwords == searchResult.length) {// 검색된 게 있으면 표시와 함께 띄움
-                    let song = songs[j].split("/")[0];
-                    searchedSong += "<tr><td>" + singer + "</td>" + "<td>" + song.substring(0, searchResult[0]);
-                    let pos;
-                    let index;
-                    for (let k = 0; k < numwords; k++) {
-                        if (k == 0) {
-                            pos = searchResult[0];
-                            index = 0;
-                            searchedSong += "<b>" + song.substr(pos, wordslen[0]) + "</b>";
-                        }
-                        else {
-                            if (searchResult[k] > pos) {
-                                pos = searchResult[k];
-                                index = k;
-                                searchedSong += "<b>" + song.substr(pos, wordslen[k]) + "</b>";
-                            }
-                        }
-                        if (k != numwords - 1) {
-                            if (searchResult[k] + wordslen[k] < searchResult[k + 1]) {
-                                searchedSong += song.substring(searchResult[k] + wordslen[k], searchResult[k + 1]);
-                            }
-                        }
-                    }
-                    searchedSong += song.substr(pos + wordslen[index]) + "</td></tr>";
-                }
-            }
-        }
-    }
-    return { searchedSinger, searchedSong };
+// 노래 개수를 업데이트하는 함수
+function updateSongCount() {
+    const songList = document.getElementById('songList');
+    const count = songList.children.length; // songList의 자식 요소 개수
+    document.getElementById('count').innerText = count; // 개수 업데이트
 }
 
-function songsOfSinger(songslen, numwords, songs, words, searchedSinger, strlen) {
-    for (let j = 0; j < songslen; j++) {
-        let songResult = []; // 가수 노래 검색
-        let index = [];
-        for (let k = 0; k < numwords; k++) { // 노래에서도 검색되는지 확인
-            let songSearch = songs[j].toLowerCase().search(words[k].toLowerCase());
-            if (songSearch != -1) {
-                songResult.push(songSearch);
-                index.push(k);
-            }
-        }
-        let song = songs[j].split("/")[0];
-        let inlen = index.length;
-        if (inlen != 0) { // 노래에서 검색된 게 있으면 표시와 함께 띄움
-            let pos;
-            let ind;
-            ({ pos, ind, searchedSinger } = highlightSong(searchedSinger, song, songResult, inlen, index, strlen));
-            searchedSinger += song.substr(pos + strlen[ind]) + "</td>";
-        }
-        else { // 없으면 그냥 띄움
-            searchedSinger += "<td ";
-            if (songsPerRow == 2) {
-                searchedSinger += "style=\"width:34%;\"";
-            }
-            else {
-                searchedSinger += "style=\"width:14.5%;\"";
-            }
-            searchedSinger += ">" + song + "</td>";
-        }
-        if (j % songsPerRow == songsPerRow - 1) {
-            searchedSinger += "</tr>";
-            if (j != songslen - 1) {
-                searchedSinger += "<tr>";
-            }
-        }
-    }
-    if (songslen % songsPerRow != 0) {
-        searchedSinger += "</tr>";
-    }
-    return searchedSinger;
+// 노래를 리스트에 추가하는 함수
+function addSongToList(artist, song) {
+    const songList = document.getElementById('songList');
+    const songButton = document.createElement('button'); // 노래 버튼 생성
+    songButton.className = 'songButton'; // 버튼 클래스 설정
+
+    const songImage = document.createElement('img'); // 이미지 요소 생성
+    songImage.src = song.image; // 이미지 추가
+    songButton.appendChild(songImage); // 버튼에 이미지 추가
+
+    const songText = document.createElement('span'); // 텍스트 요소 생성
+    songText.textContent = `${artist} - ${song.title}`; // "가수 - 제목" 형식으로 추가
+    songButton.appendChild(songText); // 버튼에 제목 추가
+
+    // 버튼 클릭 시 노래 재생
+    songButton.addEventListener('click', function() {
+        playSong(song.title, artist);
+    });
+    songList.appendChild(songButton); // songList에 추가
+    updateSongCount(); // 개수 업데이트
 }
 
-function highlightSong(searchedSinger, song, songResult, inlen, index, strlen) {
-    searchedSinger += "<td ";
-    if (songsPerRow == 2) {
-        searchedSinger += "style=\"width:34%;\"";
-    }
-    else {
-        searchedSinger += "style=\"width:14.5%;\"";
-    }
-    searchedSinger += ">" + song.substring(0, songResult[0]);
-    let pos;
-    let ind;
-    for (let k = 0; k < inlen; k++) {
-        if (k == 0) {
-            pos = songResult[0];
-            ind = index[0];
-            searchedSinger += "<b>" + song.substr(pos, strlen[ind]) + "</b>"; // 처음 검색된 부분
-        }
-        else {
-            if (songResult[k] > pos) {
-                pos = songResult[k];
-                ind = index[k];
-                searchedSinger += "<b>" + song.substr(pos, strlen[ind]) + "</b>"; // 다음 검색된 부분
-            }
-        }
-        if (k != inlen - 1) {
-            let inK = index[k];
-            if (songResult[k] + strlen[inK] < songResult[k + 1]) {
-                searchedSinger += song.substring(songResult[k] + strlen[inK], songResult[k + 1]);
-            }
-        }
-    }
-    return { pos, ind, searchedSinger };
+// 입력 필드를 비우고 전체 노래 리스트를 다시 표시하는 함수
+function cleartext() {
+    document.getElementById('songInput').value = ''; // 입력 필드를 비웁니다.
+    displaySongList(); // 전체 노래 리스트를 다시 표시합니다.
 }
 
-function singerSearch(searchedSinger, spannum, singer, searchResult, numwords, strlen) {
-    searchedSinger += "<tr><td rowspan=\"" + spannum + "\" ";
-    if (songsPerRow == 2) {
-        searchedSinger += "style=\"width:32%;\"";
-    }
-    else {
-        searchedSinger += "style=\"width:13%;\"";
-    }
-    searchedSinger += ">" + singer.substring(0, searchResult[0]); // 첫 단어 검색 전
-    let pos;
-    let index;
-    for (let j = 0; j < numwords; j++) {
-        if (j == 0) {
-            pos = searchResult[0];
-            index = 0;
-            searchedSinger += "<b>" + singer.substr(pos, strlen[0]) + "</b>"; // 처음 검색된 부분
-        }
-        else {
-            if (searchResult[j] > pos) {
-                pos = searchResult[j];
-                index = j;
-                searchedSinger += "<b>" + singer.substr(pos, strlen[j]) + "</b>"; // 다음 검색된 부분
-            }
-        }
-        if (j != numwords - 1) { // 마지막 단어가 아니면
-            if (searchResult[j] + strlen[j] < searchResult[j + 1]) { // 다음 단어 검색 전
-                searchedSinger += singer.substring(searchResult[j] + strlen[j], searchResult[j + 1]);
-            }
-        }
-    }
-    searchedSinger += singer.substr(pos + strlen[index]) + "</td>"; // 마지막 단어 검색 후
-    return searchedSinger;
+// 버튼에 마우스 오버 시 색상을 변경하는 함수
+function changecolor(button) {
+    button.style.backgroundColor = 'rgb(200, 50, 80)'; // 마우스 오버 시 색상 변경.
 }
+
+// 버튼에서 마우스 아웃 시 원래 색상으로 복원하는 함수
+function returncolor(button) {
+    button.style.backgroundColor = 'rgb(250, 50, 100)'; // 마우스 아웃 시 원래 색상으로 복원
+}
+
+// 노래 리스트를 필터링하여 표시하는 함수
+function displaySongList(filter = '') {
+    const songListContainer = document.getElementById('songList');
+    songListContainer.innerHTML = ''; // 이전 리스트 제거
+
+    // 아티스트를 정렬
+    const sortedArtists = Object.keys(songs).sort();
+
+    sortedArtists.forEach(artist => {
+        const songArray = songs[artist];
+        
+        // 노래를 제목 또는 아티스트 이름으로 필터링
+        const sortedSongs = songArray.filter(song => 
+            song.title.includes(filter) || artist.includes(filter) // 제목 또는 아티스트 이름으로 필터링
+        ).sort((a, b) => a.title.localeCompare(b.title)); // 제목으로 정렬
+
+        if (sortedSongs.length > 0) { // 필터링된 노래가 있을 경우에만 버튼 생성
+            sortedSongs.forEach(song => {
+                addSongToList(artist, song); // 아티스트와 노래 정보를 전달
+            });
+        }
+    });
+}
+
+// 노래를 재생하는 함수
+function playSong(songTitle, artist) {
+    const videoContainer = document.getElementById('videoContainer');
+    videoContainer.innerHTML = ''; // 이전 동영상 제거
+
+
+
+    const song = songs[artist].find(song => song.title === songTitle); // 선택한 노래 찾기
+    if (song) {
+        const videoLink = song.link; // 노래 링크 가져오기
+// 자동 재생을 위한 파라미터 추가
+const autoplayLink = videoLink.includes('?') ? `${videoLink}&autoplay=1` : `${videoLink}?autoplay=1`;
+        const iframe = document.createElement('iframe'); // iframe 요소 생성
+        iframe.width = "560"; // iframe 너비 설정
+        iframe.height = "315"; // iframe 높이 설정
+        iframe.src = videoLink; // iframe 소스 설정
+        iframe.frameBorder = "0"; // 테두리 제거
+        iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"; // iframe 허용 설정
+        iframe.allowFullscreen = true; // 전체 화면 허용
+
+        videoContainer.appendChild(iframe); // videoContainer에 iframe 추가
+    } else {
+        videoContainer.innerHTML = '<p>해당 노래를 찾을 수 없습니다.</p>'; // 노래를 찾을 수 없는 경우 메시지 표시
+    }
+}
+
+// 입력 필드에 이벤트 리스너 추가
+document.getElementById('songInput').addEventListener('input', function() {
+    const songTitle = this.value.trim(); // 입력값 가져오기
+    displaySongList(songTitle); // 입력값에 따라 노래 리스트 필터링
+});
+
+// 페이지 로드 시 노래 리스트 표시
+displaySongList();
+
