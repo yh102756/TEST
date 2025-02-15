@@ -76,7 +76,7 @@ const songs = {
         {
             "title": "오늘은 가지마",
             "link": "https://vod.sooplive.co.kr/player/139727565?autoPlay=true",
-            "image": "file:///C:/Users/kys0918/Desktop/%EC%98%A4%EB%8A%98%EC%9D%80%20%EA%B0%80%EC%A7%80%EB%A7%88.jpg"
+            "image": "https://iflv14.sooplive.co.kr/clip/20241019/059/868e4a61-4e9f-4ada-a56d-1d6dd5e994ae/24649059_l.jpg"
         }
     ],
     "선우정아": [
@@ -97,12 +97,12 @@ const songs = {
         {
             "title": "니 소식",
             "link": "https://vod.sooplive.co.kr/player/140804707?autoPlay=true",
-            "image": "file:///C:/Users/kys0918/Desktop/%EB%8B%88%EC%86%8C%EC%8B%9D.jpg"
+            "image": "https://videoimg.sooplive.co.kr/php/SnapshotLoad.php?rowKey=20241031_24948995_1_l"
         },
         {
             "title": "새 사랑",
             "link": "https://vod.sooplive.co.kr/player/139826463?autoPlay=true",
-            "image": "file:///C:/Users/kys0918/Desktop/%EC%83%88%EC%82%AC%EB%9E%91.jpg"
+            "image": "https://iflv14.sooplive.co.kr/clip/20241020/265/ba39e421-fe30-47ea-9eb9-3699b33b4ea1/24676265_l.jpg"
         }
     ],
     "스탠딩에그": [
@@ -135,22 +135,22 @@ const songs = {
         {
             "title": "넌 나의 20대 였어",
             "link": "https://vod.sooplive.co.kr/player/145777577?autoPlay=true",
-            "image": "file:///C:/Users/kys0918/Desktop/20%EB%8C%80.jpg"
+            "image": "https://videoimg.sooplive.co.kr/php/SnapshotLoad.php?rowKey=20241221_26344305_1_l"
         },
         {
             "title": "널 미워 하기로 했어",
             "link": "https://vod.sooplive.co.kr/player/141071399?autoPlay=true",
-            "image": "file:///C:/Users/kys0918/Desktop/%EB%84%90%EB%AF%B8%EC%9B%8C%ED%95%98%EA%B8%B0%EB%A1%9C%ED%96%88%EC%96%B4.jpg"
+            "image": "https://videoimg.sooplive.co.kr/php/SnapshotLoad.php?rowKey=20241102_25024533_1_l"
         },
         {
             "title": "그날에 나는 맘이 편했을까",
             "link": "https://vod.sooplive.co.kr/player/140431267?autoPlay=true",
-            "image": "file:///C:/Users/kys0918/Desktop/%EA%B7%B8%EB%82%A0%EC%97%90.jpg"
+            "image": "https://videoimg.sooplive.co.kr/php/SnapshotLoad.php?rowKey=20241027_24845157_1_l"
         },
         {
             "title": "미친 소리",
             "link": "https://vod.sooplive.co.kr/player/139736371?autoPlay=true",
-            "image": "file:///C:/Users/kys0918/Desktop/%EB%AF%B8%EC%B9%9C%EC%86%8C%EB%A6%AC.jpg"
+            "image": "https://iflv14.sooplive.co.kr/clip/20241020/659/8e0081cc-d33e-457f-8c53-ab897aff62f8/24651659_l.jpg"
         }
     ],
     "에일리": [
@@ -171,7 +171,7 @@ const songs = {
         {
             "title": "귀요미",
             "link": "https://vod.sooplive.co.kr/player/140027837?autoPlay=true",
-            "image": "file:///C:/Users/kys0918/Desktop/3.jpg"
+            "image": "https://videoimg.sooplive.co.kr/php/SnapshotLoad.php?rowKey=clip_20241023_413_1dada4d1-55c8-44e2-844c-4b3ceff0e67d_24731413_l&column=2&t=1729797310"
         }
     ],
     "헤일": [
@@ -185,7 +185,7 @@ const songs = {
         {
             "title": "안녕이라고 말하지마",
             "link": "https://vod.sooplive.co.kr/player/145775347?autoPlay=true",
-            "image": "file:///C:/Users/kys0918/Desktop/6.jpg"
+            "image": "https://videoimg.sooplive.co.kr/php/SnapshotLoad.php?rowKey=20241221_26343725_1_l"
         },
 {
             "title": "미워도 사랑하니까",
